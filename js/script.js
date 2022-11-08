@@ -39,8 +39,10 @@ function addName() {
     nameItem.appendChild(saveBtn);
 
     function saveValue() {
+        let text = "Are you sure you want to save changes?";
+        if (confirm(text) == true) {
         let newValue = nameInput.value;
-    //enable the edit    
+        //enable the edit    
         editBtn.removeAttribute("disabled", "")
 
     //disable
@@ -49,6 +51,15 @@ function addName() {
     //hide 
     //saveBtn.setAttribute("display", "none")
     nameItem.removeChild(saveBtn)
+
+    //text
+    text = "Ano ba? Pabago bago ng isip. Ayan na save na";
+        }   
+        else {
+            text = "Cancel, cancel eh di ipa billboard mo!";
+        }  
+        alert (text);    
+        
     }
    }
 }
