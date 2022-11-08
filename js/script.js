@@ -26,6 +26,8 @@ function addName() {
    function editValue() {
     //removed disabled attribute
     nameInput.removeAttribute("disabled", "");
+    //disabled the edit
+    editBtn.setAttribute("disabled", "")
 
     //create save button
     let saveBtn = document.createElement("button");
@@ -38,6 +40,8 @@ function addName() {
 
     function saveValue() {
         let newValue = nameInput.value;
+    //enable the edit    
+        editBtn.removeAttribute("disabled", "")
 
     //disable
     nameInput.setAttribute("disabled", "")
